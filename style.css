@@ -1,0 +1,35 @@
+body nav {
+  background:white;
+  height: 98px;
+  width: 100%;
+  font-family:cursive;
+}
+body nav ul{
+  float:right;              
+  background-color: white;             
+}
+body nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  background-color: white;
+}
+body nav ul li a{
+  color: whiteblack;
+  font-size: 16px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background-color: white;
+}
+
+.heading{position:absolute; top: 45%; background-color: white; margin-left: 14%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size:55px; color: yellow;}
+  .p1{position:absolute; top: 55% ; background-color: white; margin-left: 20%;
+  margin-right: 20%; margin-top:15px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+  font-size: 23px;}
+  footer a{color: gray;}
+body a:hover{color: gray;
+}
+footer a:hover{color: #2691d9; text-decoration: underline;}
+footer li {font-size: 13px; margin-top: 5px; color: gray;}
