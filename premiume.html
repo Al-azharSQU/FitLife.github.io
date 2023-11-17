@@ -1,70 +1,99 @@
 <html>
 
 <head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Premiume</title>
+    
     <link rel="stylesheet" href="style.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  </head>
 </head>
 
 
 <style>
 body{
-  background-color: gray;
-   
+  background-image: linear-gradient(to right, rgb(80, 79, 79), rgba(128, 128, 128, 0.116)), url(SIX_DF3DC401-C13F-411C-8AD3-06749F242B5B.PNG);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100%;
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.form-control{
+  background-color: rgb(181, 181, 181);
+}
+
+/* user info*/
+.col-sm-1 {
+  color: rgb(181, 181, 181);
 }
 
 
 </style>
 <header>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="" id="navbarText">
-              <ul class="navbar-nav mr-auto">
-                <li>
-                     <a class="navbar-brand" href="indexd.html" id="LOGO"><img src="FitLife.JPEG" alt="logo" width="90" height="90"></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="indexd.html">Home </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about us.html">About us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact us.html">Contact us</a>
-                </li>
-              </ul>
-              
-            </div>
-        </nav>
-    </div>
-    </header>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg ">
+        <div class="" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li>
+                 <a class="navbar-brand" href="indexd.html" id="LOGO"><img src="fitPNG.PNG" alt="logo" width="65" height="35"></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="indexd.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about us.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact us.html">Contact us</a>
+            </li>
+          </ul>
+          
+        </div>
+    </nav>
+</div>
+</header>
 
 
 <body>
 <br>
   <form>
   
-  <div class="container" id="form" >
+  
       
-    <h3 style="font-family: 'Times New Roman', Times, serif; text-align:left;color: yellow;  ">--Start youre New You--</h3> 
-    <div class="padding">
-      <div class="row">
+    <h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; padding-inline-end: 20px; padding-left: 10px; margin-left: 20px;
+    background-color: rgb(75, 74, 74); color: yellow; height: 10%;width: 11%; border: 1px solid; border-radius: 8px;"  >Start youre New You</h3> 
+    
+    <div class="container"  >
+    <div class="padding" id="pay">
+      <div class="row" >
       <div class="col-sm-6">
-      <div class="card">
-      <div class="card-header">
+      <div class="card" style="background:transparent ; backdrop-filter:blur(40px) ; border: 1px solid; border-radius: 20px;">
+      <div class="card-header" >
       <strong>Credit Card</strong>
       <small>enter your card details</small>
       </div>
-      <div class="card-body">
-      <div class="row">
-      <div class="col-sm-12">
+      <div class="card-body" >
+      <div class="row" >
+      <div class="col-sm-12" >
       <div class="form-group">
           
       
           
-      <label for="name">Name</label>
-      <input class="form-control" id="name" type="text" placeholder="Enter your name">
+      <label for="name" style="font-style:oblique;"> Name</label>
+      <input class="form-control" id="name" type="text" placeholder="Enter your name" >
       </div>
       </div>
       </div>
@@ -72,13 +101,13 @@ body{
       <div class="row">
       <div class="col-sm-12">
       <div class="form-group">
-      <label for="ccnumber">Credit Card Number</label>
+      <label for="ccnumber" style="font-style:oblique;">Credit Card Number</label>
       
       
       <div class="input-group">
       <input class="form-control" type="text" placeholder="0000 0000 0000 0000" autocomplete="email">
       <div class="input-group-append">
-      <span class="input-group-text">
+     
       <i class="mdi mdi-credit-card"></i>
       </span>
       </div>
@@ -89,7 +118,7 @@ body{
       
       <div class="row">
       <div class="form-group col-sm-4">
-      <label for="ccmonth">Month</label>
+      <label for="ccmonth" style="font-style:oblique;">Month</label>
         <select class="form-control" id="ccmonth">
           <option>1</option>
           <option>2</option>
@@ -106,7 +135,7 @@ body{
         </select>
       </div>
       <div class="form-group col-sm-4">
-        <label for="ccyear">Year</label>
+        <label for="ccyear" style="font-style:oblique;">Year</label>
        <select class="form-control" id="ccyear">
               <option>2020</option>
               <option>2021</option>
@@ -120,7 +149,7 @@ body{
       </div>
       <div class="col-sm-4">
       <div class="form-group">
-      <label for="cvv">CVV/CVC</label>
+      <label for="cvv" style="font-style:oblique;">CVV/CVC</label>
       <input class="form-control" id="cvv" type="text" placeholder="123">
       </div>
       </div>
@@ -176,10 +205,27 @@ body{
             <button type="submit" class="btn btn-warning">Sign in</button>
           </div>
     </div>
-
-
-
   </form>
+
+  <div class="footer-basic">   
+    <footer>
+         
+           <div class="social">
+              <a href="#"><i class="icon ion-social-instagram"></i></a>
+              <a href="#"><i class="icon ion-social-snapchat"></i></a>
+              <a href="#"><i class="icon ion-social-twitter"></i></a>
+              <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="indexd.html">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="about us.html">About</a></li>
+                <li class="list-inline-item"><a href="contact us.html">Contact us</a></li>
+                
+            </ul>
+            <p class="copyright">FitLife Hub </p>
+        </footer>
+    </div>
         
 
 </body>

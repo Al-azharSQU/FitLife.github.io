@@ -18,20 +18,35 @@
 
 <style>
   body { 
-    
     min-height: 100vh;
+     position: relative;
     background-image: url(double.PNG);
     background-size: cover;
     background-position: center;
-    background-position-y: 20%;
     backdrop-filter:blur(5px) ;
    
     
   }
+
+#caption{
+  font-family:'Gill Sans';
+  height: 50%; 
+  width: 50%;
+  border: 1px solid;
+  border-radius:10px;
+  position: relative;
+  top: 100px; 
+  left: 250px;
+  text-align: center;
+  padding: 5px; 
+  color: black;
+  text-shadow:0.5px .5px rgb(249, 249, 249);
+   background-color: rgba(128, 128, 128, 0.208);
+}
 </style>
 
 
-
+<body>
   <header>
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg ">
@@ -57,7 +72,7 @@
 </header>
 
 
-<body>
+
  </p>
     <div class="text-center">
        <a href="premiume.html"><button type="button" class="btn btn-outline-warning" ><abbr title="Paid Membership">Premiume</abbr> </button></a>
@@ -74,14 +89,14 @@
     
     </div>
   
-    <div style="padding: 5%;     " >
-      <pre style=" font-style: italic; text-shadow: 2px 1px rgb(116, 116, 116) ; color: rgb(255, 255, 166) ; border:2; border: radius 60px; "> 
-                                              Welcom to FitLife Hub website
-                             here you can find the help that you need to start a new healthy life.
-      </pre>
+    <div id="caption" >
+      
+                                              Welcom to FitLife Hub <span style="color: gray;"> website
+                             here you can find the </span>help that you need to <span style="color: gray;">start a new healthy life.</span>
+      
      </div>
 
-<div class="footer-basic">   
+<div class="footer-basic" id="footer1">   
   <footer>
         <div class="social">
             <a href="#"><i class="icon ion-social-instagram"></i></a>
