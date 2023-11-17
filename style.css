@@ -1,35 +1,82 @@
-body nav {
-  background:white;
-  height: 98px;
-  width: 100%;
-  font-family:cursive;
-}
-body nav ul{
-  float:right;              
-  background-color: white;             
-}
-body nav ul li{
-  display: inline-block;
-  line-height: 80px;
-  background-color: white;
-}
-body nav ul li a{
-  color: whiteblack;
-  font-size: 16px;
-  padding: 5px 12px;
-  border-radius: 4px;
-  text-transform: uppercase;
-  background-color: white;
+
+.container-fluid{
+    background-color:rgb(255, 255, 128);
+    
+
 }
 
-.heading{position:absolute; top: 45%; background-color: white; margin-left: 14%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size:55px; color: yellow;}
-  .p1{position:absolute; top: 55% ; background-color: white; margin-left: 20%;
-  margin-right: 20%; margin-top:15px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
-  font-size: 23px;}
-  footer a{color: gray;}
-body a:hover{color: gray;
+
+.text-center{
+ 
+ align-items: center;
+ justify-content: center;
+ 
+
+  backdrop-filter: blur(2px);
 }
-footer a:hover{color: #2691d9; text-decoration: underline;}
-footer li {font-size: 13px; margin-top: 5px; color: gray;}
+
+
+.footer-basic {
+    padding: 2%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    color:#010101;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:30px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #b1b1b1;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.6;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }
