@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+            <!DOCTYPE html>
 <html lang="en">
 
     
@@ -61,6 +62,9 @@
           height: 500px;
         }
     </style>
+    <script>
+      
+    </script>
      <header>
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg ">
@@ -89,7 +93,6 @@
 <body>
   <br>
   <br>
-  <div></div>
   <h2  id="hcal" style="text-decoration: underline; background-color: gainsboro;">Calorie Calculator</h2>
 
   <p id="def">Fill the form with your info and goal!</p>
@@ -172,13 +175,62 @@
               <option value="maintainWeight">Maintain Weight</option>
               <option value="gainWeight">Gain Weight</option>
           </select>
+          <label for="calories">calories:</label> <br>
+          <input type="text" id="calories" readonly>
 
-          <button type="button" onclick="calculateCalories()">Calculate</button>
+          <button type="button" onclick="main()">Calculate</button>
       </form>
   </div>
-      <div id="result"></div>
 
-    
+    <script>
+      function calculateBMR(age, gender, weight, height) {
+    if (gender.toLowerCase() === 'male') {
+        return 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+    } else  {
+        return 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+   
+}
+      }
+
+function calculateTDEE(bmr, activityLevel) {
+    const activityFactors = {
+        'sedentary': 1.2,
+        'lightly active': 1.375,
+        'moderately active': 1.55,
+        'very active': 1.725,
+        'extra active': 1.9
+    };
+
+    return bmr * activityFactors[activityLevel.toLowerCase()];
+}
+
+function calculateCalories(tdee, goal) {
+    const goalFactors = {
+        'lose weight': 0.8,
+        'gain weight': 1.2,
+        'maintain weight': 1.0
+    };
+
+    return tdee * goalFactors[goal.toLowerCase()];
+}
+
+function main() {
+        const age = parseInt(document.getElementById("age").value);
+        const gender = document.getElementById("gender").value;
+        const weight = parseFloat(document.getElementById("weight").value);
+        const height = parseFloat(document.getElementById("height").value);
+        const activityLevel = document.getElementById("activity").value;
+        const goal = document.getElementById("goal").value;
+  
+        const bmr = calculateBMR(age, gender, weight, height);
+        const tdee = calculateTDEE(bmr, activityLevel);
+        const calories = calculateCalories(tdee, goal);
+  
+        document.getElementById("calories").value=calories;
+      
+    }
+
+    </script>
     
 
 </body>
