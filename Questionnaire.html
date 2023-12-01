@@ -1,0 +1,105 @@
+<html>
+   
+   <body>
+    <form name="Questionnaire form">
+        <div style="position: relative; left: 500px;">
+            <h1>Questionnaire page</h1>
+        </div>
+        <table>
+            <tr>
+                <td> <label for="name"> Enter Your Name:</label></td>
+                <td><input type="text" id="name" value=""></td>
+            </tr>
+            <tr>
+                <td>how many stars you give us according to our service?</td> <br>
+                <td>
+                <input type="radio" id="five" name="rate" value="Five stars!" required>
+                <label for="five stars">Five stars!</label>
+
+                <input type="radio" id="four" name="rate" value="four stars!" required>
+                <label for="four stars">four stars!</label>
+
+                <input type="radio" id="three" name="rate" value="three stars" required>
+                <label for="three stars">three stars</label>
+
+                <input type="radio" id="two" name="rate" value="Two stars" required>
+                <label for="two stars">Two stars</label>
+
+                <input type="radio" id="one" name="rate" value="One stars" required>
+                <label for="Three stars">One star</label></td>
+
+            </tr>
+            <tr>
+                <td>could you tell us which part you like?</td>
+                <td>
+                    <input type="checkbox" id="clculator" value="calories clculator ">
+                    <label for="clculator">calories calcolator</label>
+                    <input type="checkbox" id="workout plan" value="workout plan ">
+                    <label for="workout plan"> workout plan</label>
+                    <input type="checkbox" id="food squedule" value="food squedule">
+                    <label for="food squedule"> food squedule</label>
+
+                </td>
+
+            </tr>
+            <tr>
+                <td>For farthure comments please tell us:</td>
+            </tr>
+            <tr>
+                <td><textarea name="comments" id="comementarea" cols="20" rows="10"></textarea></td>
+            </tr>
+
+        </table>
+        <button type="submit" onclick="validation()">Submit</button>
+    </form>
+    <script>
+        function validation() {
+            var name = document.getElementById('name').value;
+            var rating = document.querySelector('input[name="rate"]:checked');
+            var sections = document.querySelectorAll('input[type="checkbox"]:checked');
+            var commentArea = document.getElementById('comementarea').value;
+    
+            if (name.trim() === "") {
+                alert('Please enter your name');
+                return false;
+            }
+    
+            if (!rating) {
+                alert('Please Rate us !!!.');
+                return false;
+            }
+    
+            if (sections.length === 0) {
+                alert('Please select at least one part you like.');
+                return false;
+            }
+    
+            // Additional custom validation can be added here
+    
+            // If all validations pass, construct the URL with query parameters
+            var queryParams = "?name=" + encodeURIComponent(name) +
+                              "&rating=" + encodeURIComponent(rating.value) +
+                              "&likedSections=" + encodeURIComponent(getLikedSections()) +
+                              "&comments=" + encodeURIComponent(commentArea);
+    
+            // Redirect to the home page with the query parameters
+            window.location.href = "indexed.html" + queryParams;
+    
+            // Prevent the form from actually submitting
+            return false;
+        }
+    
+        function getLikedSections() {
+            var sections = document.querySelectorAll('input[type="checkbox"]:checked');
+            var likedSections = [];
+    
+            sections.forEach(function(section) {
+                likedSections.push(section.value);
+            });
+    
+            return likedSections.join(", ");
+        }
+    </script>
+    
+   </body>
+</html>
