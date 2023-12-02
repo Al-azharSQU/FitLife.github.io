@@ -2,7 +2,8 @@
 
 /* header color*/
 .container-fluid{
-    background-color:rgb(255, 255, 128);
+  width: 100px;  
+  background-color:rgb(255, 255, 128);
     height: 60px;
     font-size: large;
 
@@ -21,13 +22,13 @@ padding-left:15px ;
 }
 
 #calc{
-  position: static;
+  position: relative;
   background-color: #dbdbdb60;
   border-radius: 10px;
   width:fit-content;
   padding: 18px;
+  margin: 5%auto;
   height: fit-content;
-  margin-right: 600px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -70,7 +71,7 @@ padding-left:15px ;
   }
   
   .footer-basic{
-  margin-top: 10%;
+  margin-top: 0%;
   position: static;
    bottom: 0;
    width: 100%;
