@@ -1,5 +1,4 @@
-
-            <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
     
@@ -164,16 +163,16 @@
           <label for="activity">Activity Level:</label>
           <select id="activity" name="activity" required>
               <option value="sedentary">Sedentary</option>
-              <option value="lightlyActive">Lightly Active</option>
-              <option value="moderatelyActive">Moderately Active</option>
-              <option value="veryActive">Very Active</option>
+              <option value="lightly active">Lightly Active</option>
+              <option value="moderately active">Moderately Active</option>
+              <option value="very active">Very Active</option>
           </select>
 
           <label for="goal">Goal:</label>
           <select id="goal" name="goal" required>
-              <option value="loseWeight">Lose Weight</option>
-              <option value="maintainWeight">Maintain Weight</option>
-              <option value="gainWeight">Gain Weight</option>
+              <option value="lose weight">Lose Weight</option>
+              <option value="maintain weight">Maintain Weight</option>
+              <option value="gain weight">Gain Weight</option>
           </select>
           <label for="calories">calories:</label> <br>
           <input type="text" id="calories" readonly>
@@ -198,7 +197,7 @@ function calculateTDEE(bmr, activityLevel) {
         'lightly active': 1.375,
         'moderately active': 1.55,
         'very active': 1.725,
-        'extra active': 1.9
+       
     };
 
     return bmr * activityFactors[activityLevel.toLowerCase()];
