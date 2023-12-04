@@ -62,6 +62,57 @@
           height: 20%;
         }
     </style>
+
+<script>
+  function calculateBMR(age, gender, weight, height) {
+if (gender.toLowerCase() === 'male') {
+  return 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+} else  {
+  return 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+
+}
+}
+
+function calculateTDEE(bmr, activityLevel) {
+const activityFactors = {
+  'sedentary': 1.2,
+  'lightly active': 1.375,
+  'moderately active': 1.55,
+  'very active': 1.725,
+ 
+};
+
+return bmr * activityFactors[activityLevel.toLowerCase()];
+}
+
+function calculateCalories(tdee, goal) {
+const goalFactors = {
+  'lose weight': 0.8,
+  'gain weight': 1.2,
+  'maintain weight': 1.0
+};
+
+return tdee * goalFactors[goal.toLowerCase()];
+}
+
+function main() {
+  const age = parseInt(document.getElementById("age").value);
+  const gender = document.getElementById("gender").value;
+  const weight = parseFloat(document.getElementById("weight").value);
+  const height = parseFloat(document.getElementById("height").value);
+  const activityLevel = document.getElementById("activity").value;
+  const goal = document.getElementById("goal").value;
+
+  const bmr = calculateBMR(age, gender, weight, height);
+  const tdee = calculateTDEE(bmr, activityLevel);
+  const calories = calculateCalories(tdee, goal);
+  const roundCal= Math.round(calories);
+  document.getElementById("calories").value=roundCal;
+
+}
+
+</script>
+
    
      <header>
         <div class="container-fluid">
@@ -165,57 +216,8 @@
         <button type="button" onclick="main()">Calculate</button>
     </form>
   </div>
-  <script>
-        function calculateBMR(age, gender, weight, height) {
-    if (gender.toLowerCase() === 'male') {
-        return 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
-    } else  {
-        return 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
-   
-}
-      }
 
-function calculateTDEE(bmr, activityLevel) {
-    const activityFactors = {
-        'sedentary': 1.2,
-        'lightly active': 1.375,
-        'moderately active': 1.55,
-        'very active': 1.725,
-       
-    };
-
-    return bmr * activityFactors[activityLevel.toLowerCase()];
-}
-
-function calculateCalories(tdee, goal) {
-    const goalFactors = {
-        'lose weight': 0.8,
-        'gain weight': 1.2,
-        'maintain weight': 1.0
-    };
-
-    return tdee * goalFactors[goal.toLowerCase()];
-}
-
-function main() {
-        const age = parseInt(document.getElementById("age").value);
-        const gender = document.getElementById("gender").value;
-        const weight = parseFloat(document.getElementById("weight").value);
-        const height = parseFloat(document.getElementById("height").value);
-        const activityLevel = document.getElementById("activity").value;
-        const goal = document.getElementById("goal").value;
-  
-        const bmr = calculateBMR(age, gender, weight, height);
-        const tdee = calculateTDEE(bmr, activityLevel);
-        const calories = calculateCalories(tdee, goal);
-        const roundCal= Math.round(calories);
-        document.getElementById("calories").value=roundCal;
-      
-    }
- 
-  </script>
-
-
+  <a href="calc2.html" style="margin-left: 5%;"><button > try another virsion</button></a>
 
 
 </body>
